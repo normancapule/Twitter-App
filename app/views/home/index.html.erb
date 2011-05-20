@@ -1,6 +1,12 @@
-<h1>Hello! <%= @user.username%></h1>
-
-<%= link_to "Sign Out", destroy_user_session_path %>
-<br>
-<br>
-<%= render :partial=>"tweet" %>
+<h1> TWITTER </h1>
+<%= link_to "Log In", new_user_registration_path%>
+<div id="tweet_history">
+<% @tweets.each do |tweet| %>
+  --------------------------------------------<br>
+  User: <%= tweet.user.username %>
+  Title: <%= tweet.title %><br>
+  <%= tweet.content %><br>
+  <%= distance_of_time_in_words(Time.now, tweet.created_at) %> ago<br>  
+  --------------------------------------------<br>
+<% end %>
+</div>

@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
     @user = User.find(params[:user_id])
     @user.tweets.build(params[:tweet])
     @user.save
-    redirect_to home_path
+    redirect_to admin_path
   end
 
   def edit
@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
     @user = User.find(params[:user_id])
     @tweet = @user.tweets.find params[:id]
     @tweet.destroy
-    redirect_to home_path
+    redirect_to admin_path
   end
 
 end

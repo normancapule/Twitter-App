@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!
+
   def index
-    @user = current_user
-    @tweets = @user.tweets
-    @tweet = Tweet.new
+    @tweets = Tweet.all
+    if user_signed_in?
+        redirect_to admin_path
+    end
   end
 
 end
