@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
   database: tweet-app_development
-  username: exist
-  password: 123qwe
+  username: normz
+  password: 10831215
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -11,13 +11,13 @@ development:
 test: &test
   adapter: postgresql
   database: tweet-app_test
-  username: exist
-  password: 123qwe
+  username: normz
+  password: 10831215
   host: localhost
 
 production:
   adapter: postgresql
   database: tweet-app_production
-  username: exist
-  password: 123qwe
+  username: normz
+  password: 10831215
   host: localhost
