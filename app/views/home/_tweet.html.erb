@@ -1,0 +1,27 @@
+<div id="tweet_create">
+<%= form_for [@user,@tweet], :method=>:post do |f| %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+
+<div id="tweets">
+<% @tweets.each do |tweet| %>
+  <p>
+  --------------------------------------------<br>
+  Title: <%= tweet.title %><br>
+  <%= tweet.content %><br>
+  --------------------------------------------<br>
+  </p>
+<%end%>
+</div>
