@@ -4,7 +4,7 @@ TweetApp::Application.routes.draw do
   resources :users, :only => [:show, :index, :create] do
     resources :tweets
   end
-  match "home" => "home#index", :via => :get
+  match "admin" => "admin#index", :via => :get
 
-  root :to=>'home#index'
+  root :to=>'admin#index'
 end

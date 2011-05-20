@@ -1,0 +1,6 @@
+<h1>Hello! <%= @user.username%></h1>
+
+<%= link_to "Sign Out", destroy_user_session_path %>
+<br>
+<br>
+<%= render :partial=>"tweet" %>
