@@ -19,6 +19,10 @@ class TweetsController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:user_id])
+    @tweet = @user.tweets.find params[:id]
+    @tweet.destroy
+    redirect_to home_path
   end
 
 end

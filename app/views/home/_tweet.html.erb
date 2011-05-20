@@ -21,6 +21,8 @@
   --------------------------------------------<br>
   Title: <%= tweet.title %><br>
   <%= tweet.content %><br>
+  <%= distance_of_time_in_words(Time.now, tweet.created_at) %><br>  
+  <%= link_to "Delete", user_tweet_path(@user, tweet), :confirm => 'Are you sure?', :method => :delete %><br>
   --------------------------------------------<br>
   </p>
 <%end%>
